@@ -1,0 +1,37 @@
+PODS:
+  - Dip (7.1.1)
+  - DITranquillity (4.1.0):
+    - SwiftLazy (>= 1.1.6)
+  - EasyDi (1.5.0)
+  - SwiftLazy (1.1.7)
+  - Swinject (2.7.1)
+  - SwinjectAutoregistration (2.7.0):
+    - Swinject (~> 2.7)
+
+DEPENDENCIES:
+  - Dip
+  - DITranquillity
+  - EasyDi
+  - Swinject
+  - SwinjectAutoregistration
+
+SPEC REPOS:
+  trunk:
+    - Dip
+    - DITranquillity
+    - EasyDi
+    - SwiftLazy
+    - Swinject
+    - SwinjectAutoregistration
+
+SPEC CHECKSUMS:
+  Dip: 6bebb09d50f88633039ce2c9fe5bc56d387b492f
+  DITranquillity: a589f609d3f952665483cae4f6057abd51da914b
+  EasyDi: 69f886c8911504d33cb55db4a47648f434feeddd
+  SwiftLazy: dcb1edc6c2b633ba2e68f28554d9dd6d1c0bfd13
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
+
+PODFILE CHECKSUM: 6396101692b8bfb098c35132db6730d79931d11b
+
+COCOAPODS: 1.9.1
