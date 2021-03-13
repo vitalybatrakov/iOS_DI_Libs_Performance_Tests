@@ -11,7 +11,7 @@ import Swinject
 
 struct SwinjectSimpleGraphTests {
     
-    static let registerCount = 1000
+    static let registerCount = 100
     
     static let resolveMultiplier = 1000 / registerCount
     static let testsCount = 100

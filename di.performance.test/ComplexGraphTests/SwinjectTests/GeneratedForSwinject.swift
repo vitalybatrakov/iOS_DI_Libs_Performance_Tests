@@ -57,55 +57,55 @@ extension SwinjectComplexGraphTests {
             let param2 = resolver.resolve(InjectedTestProtocol3.self)!
             let param3 = resolver.resolve(InjectedTestProtocol4.self)!
             return InjectedTestClass1(param1: param1, param2: param2, param3: param3)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol2.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol3.self)!
             let param2 = resolver.resolve(InjectedTestProtocol4.self)!
             let param3 = resolver.resolve(InjectedTestProtocol5.self)!
             return InjectedTestClass2(param1: param1, param2: param2, param3: param3)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol3.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol4.self)!
             let param2 = resolver.resolve(InjectedTestProtocol5.self)!
             let param3 = resolver.resolve(InjectedTestProtocol6.self)!
             return InjectedTestClass3(param1: param1, param2: param2, param3: param3)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol4.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol5.self)!
             let param2 = resolver.resolve(InjectedTestProtocol6.self)!
             let param3 = resolver.resolve(InjectedTestProtocol7.self)!
             return InjectedTestClass4(param1: param1, param2: param2, param3: param3)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol5.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol6.self)!
             let param2 = resolver.resolve(InjectedTestProtocol7.self)!
             let param3 = resolver.resolve(InjectedTestProtocol8.self)!
             return InjectedTestClass5(param1: param1, param2: param2, param3: param3)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol6.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol7.self)!
             let param2 = resolver.resolve(InjectedTestProtocol8.self)!
             let param3 = resolver.resolve(InjectedTestProtocol9.self)!
             return InjectedTestClass6(param1: param1, param2: param2, param3: param3)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol7.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol8.self)!
             let param2 = resolver.resolve(InjectedTestProtocol9.self)!
             let param3 = resolver.resolve(InjectedTestProtocol10.self)!
             return InjectedTestClass7(param1: param1, param2: param2, param3: param3)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol8.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol9.self)!
             let param2 = resolver.resolve(InjectedTestProtocol10.self)!
             return InjectedTestClass8(param1: param1, param2: param2)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol9.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol10.self)!
             return InjectedTestClass9(param1: param1)
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
         container.register(InjectedTestProtocol10.self) { resolver in
             return InjectedTestClass10()
-        }.inObjectScope(.transient)
+        }//.inObjectScope(.transient)
     }
     
     static func register_100(container: Container) {
@@ -123,7 +123,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass1(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol2.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -136,7 +136,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass2(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol3.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -149,7 +149,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass3(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol4.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -162,7 +162,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass4(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol5.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -175,7 +175,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass5(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol6.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -188,7 +188,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass6(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol7.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -201,7 +201,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass7(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol8.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -214,7 +214,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass8(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol9.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -227,7 +227,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass9(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol10.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -240,7 +240,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass10(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol11.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -253,7 +253,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass11(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol12.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -266,7 +266,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass12(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol13.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -279,7 +279,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass13(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol14.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -292,7 +292,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass14(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol15.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -305,7 +305,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass15(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol16.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -318,7 +318,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass16(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol17.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -331,7 +331,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass17(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol18.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -344,7 +344,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass18(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol19.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -357,7 +357,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass19(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol20.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -370,7 +370,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass20(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol21.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -383,7 +383,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass21(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol22.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -397,7 +397,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass22(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol23.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -410,7 +410,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass23(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol24.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -423,7 +423,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass24(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol25.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -436,7 +436,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass25(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol26.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -449,7 +449,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass26(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol27.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -462,7 +462,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass27(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol28.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -475,7 +475,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass28(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol29.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -488,7 +488,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass29(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol30.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -501,7 +501,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass30(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol31.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -514,7 +514,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass31(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol32.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -527,7 +527,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass32(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol33.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -540,7 +540,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass33(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol34.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -553,7 +553,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass34(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol35.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -566,7 +566,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass35(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol36.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -579,7 +579,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass36(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol37.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -592,7 +592,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass37(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol38.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -605,7 +605,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass38(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol39.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -618,7 +618,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass39(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol40.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -631,7 +631,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass40(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol41.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -644,7 +644,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass41(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol42.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -657,7 +657,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass42(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol43.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -670,7 +670,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass43(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol44.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -683,7 +683,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass44(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol45.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -696,7 +696,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass45(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol46.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -709,7 +709,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass46(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol47.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -722,7 +722,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass47(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol48.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -735,7 +735,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass48(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol49.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -748,7 +748,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass49(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol50.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -761,7 +761,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass50(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol51.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -774,7 +774,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass51(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol52.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -787,7 +787,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass52(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol53.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -800,7 +800,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass53(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol54.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -813,7 +813,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass54(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol55.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -826,7 +826,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass55(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol56.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -839,7 +839,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass56(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol57.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -852,7 +852,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass57(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol58.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -865,7 +865,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass58(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol59.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -878,7 +878,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass59(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol60.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -891,7 +891,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass60(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol61.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -904,7 +904,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass61(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol62.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -917,7 +917,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass62(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol63.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -930,7 +930,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass63(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol64.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -943,7 +943,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass64(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol65.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -956,7 +956,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass65(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol66.self) { resolver in
 
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
@@ -970,7 +970,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass66(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol67.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -983,7 +983,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass67(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol68.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -996,7 +996,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass68(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol69.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1009,7 +1009,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass69(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol70.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1022,7 +1022,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass70(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol71.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1035,7 +1035,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass71(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol72.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1048,7 +1048,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass72(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol73.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1061,7 +1061,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass73(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol74.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1074,7 +1074,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass74(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol75.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1087,7 +1087,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass75(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol76.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1100,7 +1100,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass76(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol77.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1113,7 +1113,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass77(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol78.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1126,7 +1126,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass78(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol79.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1139,7 +1139,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass79(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol80.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1152,7 +1152,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass80(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol81.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1165,7 +1165,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass81(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol82.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1178,7 +1178,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass82(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol83.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1191,7 +1191,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass83(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol84.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1204,7 +1204,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass84(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol85.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1217,7 +1217,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass85(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol86.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1230,7 +1230,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass86(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol87.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1243,7 +1243,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass87(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol88.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1256,7 +1256,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass88(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol89.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1269,7 +1269,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass89(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol90.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1282,7 +1282,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass90(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol91.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1295,7 +1295,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass91(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol92.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1308,7 +1308,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass92(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol93.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1321,7 +1321,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass93(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol94.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1334,7 +1334,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass94(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol95.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1347,7 +1347,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass95(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol96.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1360,7 +1360,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass96(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol97.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1373,7 +1373,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass97(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol98.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1386,7 +1386,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass98(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol99.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1399,7 +1399,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass99(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol100.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1412,7 +1412,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass100(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
     }
     
     static func resolving_100(container: Container) {
@@ -1534,7 +1534,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass101(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol102.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1547,7 +1547,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass102(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol103.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1560,7 +1560,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass103(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol104.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1573,7 +1573,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass104(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol105.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1586,7 +1586,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass105(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol106.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1599,7 +1599,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass106(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol107.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1612,7 +1612,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass107(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol108.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1625,7 +1625,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass108(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol109.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1638,7 +1638,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass109(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol110.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1651,7 +1651,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass110(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol111.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1664,7 +1664,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass111(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol112.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1677,7 +1677,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass112(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol113.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1690,7 +1690,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass113(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol114.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1703,7 +1703,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass114(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol115.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1716,7 +1716,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass115(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol116.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1729,7 +1729,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass116(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol117.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1742,7 +1742,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass117(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol118.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1755,7 +1755,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass118(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol119.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1768,7 +1768,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass119(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol120.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1781,7 +1781,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass120(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol121.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1794,7 +1794,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass121(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol122.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1807,7 +1807,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass122(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol123.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1820,7 +1820,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass123(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol124.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1833,7 +1833,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass124(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol125.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1846,7 +1846,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass125(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol126.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1859,7 +1859,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass126(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol127.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1872,7 +1872,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass127(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol128.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1885,7 +1885,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass128(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol129.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1898,7 +1898,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass129(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol130.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1911,7 +1911,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass130(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol131.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1924,7 +1924,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass131(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol132.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1937,7 +1937,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass132(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol133.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1950,7 +1950,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass133(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol134.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1963,7 +1963,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass134(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol135.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1976,7 +1976,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass135(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol136.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -1989,7 +1989,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass136(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol137.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2002,7 +2002,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass137(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol138.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2015,7 +2015,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass138(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol139.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2028,7 +2028,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass139(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol140.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2041,7 +2041,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass140(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol141.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2054,7 +2054,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass141(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol142.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2067,7 +2067,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass142(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol143.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2080,7 +2080,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass143(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol144.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2093,7 +2093,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass144(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol145.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2106,7 +2106,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass145(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol146.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2119,7 +2119,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass146(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol147.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2132,7 +2132,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass147(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol148.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2145,7 +2145,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass148(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol149.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2158,7 +2158,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass149(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol150.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2171,7 +2171,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass150(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol151.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2184,7 +2184,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass151(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol152.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2197,7 +2197,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass152(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol153.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2210,7 +2210,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass153(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol154.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2223,7 +2223,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass154(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol155.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2236,7 +2236,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass155(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol156.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2249,7 +2249,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass156(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol157.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2262,7 +2262,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass157(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol158.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2275,7 +2275,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass158(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol159.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2288,7 +2288,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass159(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol160.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2301,7 +2301,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass160(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol161.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2314,7 +2314,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass161(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol162.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2327,7 +2327,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass162(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol163.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2340,7 +2340,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass163(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol164.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2353,7 +2353,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass164(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol165.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2366,7 +2366,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass165(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol166.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2379,7 +2379,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass166(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol167.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2392,7 +2392,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass167(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol168.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2405,7 +2405,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass168(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol169.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2418,7 +2418,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass169(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol170.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2431,7 +2431,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass170(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol171.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2444,7 +2444,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass171(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol172.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2457,7 +2457,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass172(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol173.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2470,7 +2470,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass173(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol174.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2483,7 +2483,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass174(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol175.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2496,7 +2496,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass175(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol176.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2509,7 +2509,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass176(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol177.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2522,7 +2522,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass177(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol178.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2535,7 +2535,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass178(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol179.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2548,7 +2548,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass179(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol180.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2561,7 +2561,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass180(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol181.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2574,7 +2574,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass181(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol182.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2587,7 +2587,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass182(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol183.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2600,7 +2600,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass183(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol184.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2613,7 +2613,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass184(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol185.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2626,7 +2626,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass185(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol186.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2639,7 +2639,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass186(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol187.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2652,7 +2652,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass187(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol188.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2665,7 +2665,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass188(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol189.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2678,7 +2678,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass189(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol190.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2691,7 +2691,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass190(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol191.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2704,7 +2704,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass191(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol192.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2717,7 +2717,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass192(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol193.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2730,7 +2730,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass193(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol194.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2743,7 +2743,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass194(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol195.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2756,7 +2756,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass195(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol196.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2769,7 +2769,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass196(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol197.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2782,7 +2782,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass197(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol198.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2795,7 +2795,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass198(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol199.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2808,7 +2808,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass199(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol200.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2821,7 +2821,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass200(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
     }
     
     static func resolving_200(container: Container) {
@@ -2946,7 +2946,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass201(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol202.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2959,7 +2959,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass202(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol203.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2972,7 +2972,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass203(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol204.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2985,7 +2985,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass204(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol205.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -2998,7 +2998,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass205(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol206.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3011,7 +3011,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass206(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol207.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3024,7 +3024,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass207(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol208.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3037,7 +3037,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass208(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol209.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3050,7 +3050,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass209(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol210.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3063,7 +3063,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass210(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol211.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3076,7 +3076,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass211(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol212.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3089,7 +3089,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass212(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol213.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3102,7 +3102,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass213(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol214.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3115,7 +3115,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass214(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol215.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3128,7 +3128,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass215(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol216.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3141,7 +3141,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass216(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol217.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3154,7 +3154,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass217(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol218.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3167,7 +3167,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass218(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol219.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3180,7 +3180,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass219(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol220.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3193,7 +3193,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass220(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol221.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3206,7 +3206,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass221(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol222.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3219,7 +3219,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass222(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol223.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3232,7 +3232,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass223(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol224.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3245,7 +3245,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass224(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol225.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3258,7 +3258,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass225(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol226.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3271,7 +3271,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass226(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol227.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3284,7 +3284,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass227(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol228.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3297,7 +3297,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass228(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol229.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3310,7 +3310,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass229(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol230.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3323,7 +3323,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass230(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol231.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3336,7 +3336,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass231(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol232.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3349,7 +3349,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass232(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol233.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3362,7 +3362,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass233(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol234.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3375,7 +3375,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass234(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol235.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3388,7 +3388,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass235(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol236.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3401,7 +3401,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass236(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol237.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3414,7 +3414,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass237(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol238.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3427,7 +3427,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass238(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol239.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3440,7 +3440,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass239(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol240.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3453,7 +3453,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass240(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol241.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3466,7 +3466,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass241(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol242.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3479,7 +3479,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass242(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol243.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3492,7 +3492,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass243(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol244.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3505,7 +3505,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass244(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol245.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3518,7 +3518,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass245(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol246.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3531,7 +3531,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass246(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol247.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3544,7 +3544,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass247(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol248.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3557,7 +3557,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass248(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol249.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3570,7 +3570,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass249(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol250.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3583,7 +3583,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass250(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol251.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3596,7 +3596,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass251(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol252.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3609,7 +3609,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass252(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol253.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3622,7 +3622,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass253(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol254.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3635,7 +3635,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass254(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol255.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3648,7 +3648,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass255(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol256.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3661,7 +3661,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass256(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol257.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3674,7 +3674,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass257(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol258.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3687,7 +3687,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass258(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol259.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3700,7 +3700,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass259(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol260.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3713,7 +3713,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass260(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol261.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3726,7 +3726,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass261(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol262.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3739,7 +3739,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass262(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol263.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3752,7 +3752,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass263(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol264.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3765,7 +3765,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass264(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol265.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3778,7 +3778,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass265(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol266.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3791,7 +3791,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass266(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol267.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3804,7 +3804,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass267(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol268.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3817,7 +3817,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass268(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol269.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3830,7 +3830,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass269(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol270.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3843,7 +3843,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass270(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol271.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3856,7 +3856,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass271(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol272.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3869,7 +3869,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass272(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol273.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3882,7 +3882,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass273(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol274.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3895,7 +3895,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass274(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol275.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3908,7 +3908,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass275(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol276.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3921,7 +3921,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass276(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol277.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3934,7 +3934,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass277(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol278.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3947,7 +3947,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass278(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol279.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3960,7 +3960,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass279(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol280.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3973,7 +3973,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass280(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol281.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3986,7 +3986,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass281(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol282.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -3999,7 +3999,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass282(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol283.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4012,7 +4012,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass283(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol284.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4025,7 +4025,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass284(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol285.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4038,7 +4038,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass285(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol286.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4051,7 +4051,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass286(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol287.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4064,7 +4064,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass287(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol288.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4077,7 +4077,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass288(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol289.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4090,7 +4090,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass289(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol290.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4103,7 +4103,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass290(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol291.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4116,7 +4116,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass291(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol292.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4129,7 +4129,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass292(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol293.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4142,7 +4142,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass293(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol294.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4155,7 +4155,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass294(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol295.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4168,7 +4168,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass295(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol296.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4181,7 +4181,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass296(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol297.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4194,7 +4194,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass297(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol298.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4207,7 +4207,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass298(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol299.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4220,7 +4220,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass299(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol300.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4233,7 +4233,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass300(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol301.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4246,7 +4246,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass301(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol302.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4259,7 +4259,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass302(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol303.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4272,7 +4272,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass303(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol304.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4285,7 +4285,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass304(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol305.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
 
@@ -4299,7 +4299,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass305(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol306.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4312,7 +4312,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass306(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol307.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4325,7 +4325,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass307(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol308.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4339,7 +4339,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass308(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol309.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4352,7 +4352,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass309(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol310.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4365,7 +4365,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass310(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol311.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4378,7 +4378,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass311(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol312.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4391,7 +4391,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass312(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol313.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4404,7 +4404,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass313(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol314.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4417,7 +4417,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass314(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol315.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4430,7 +4430,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass315(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol316.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4443,7 +4443,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass316(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol317.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4456,7 +4456,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass317(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol318.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4469,7 +4469,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass318(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol319.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4482,7 +4482,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass319(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol320.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4495,7 +4495,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass320(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol321.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4508,7 +4508,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass321(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol322.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4521,7 +4521,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass322(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol323.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4534,7 +4534,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass323(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol324.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4547,7 +4547,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass324(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol325.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4560,7 +4560,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass325(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol326.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4573,7 +4573,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass326(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol327.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4586,7 +4586,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass327(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol328.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4599,7 +4599,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass328(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol329.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4612,7 +4612,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass329(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol330.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4625,7 +4625,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass330(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol331.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4638,7 +4638,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass331(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol332.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4651,7 +4651,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass332(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol333.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4664,7 +4664,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass333(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol334.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4677,7 +4677,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass334(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol335.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4690,7 +4690,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass335(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol336.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4703,7 +4703,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass336(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol337.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4716,7 +4716,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass337(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol338.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4729,7 +4729,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass338(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol339.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4742,7 +4742,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass339(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol340.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4755,7 +4755,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass340(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol341.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4768,7 +4768,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass341(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol342.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4781,7 +4781,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass342(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol343.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4794,7 +4794,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass343(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol344.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4807,7 +4807,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass344(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol345.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4820,7 +4820,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass345(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol346.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4833,7 +4833,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass346(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol347.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4846,7 +4846,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass347(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol348.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4859,7 +4859,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass348(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol349.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4872,7 +4872,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass349(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol350.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4885,7 +4885,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass350(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol351.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4898,7 +4898,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass351(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol352.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4911,7 +4911,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass352(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol353.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4924,7 +4924,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass353(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol354.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4937,7 +4937,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass354(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol355.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4950,7 +4950,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass355(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol356.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4963,7 +4963,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass356(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol357.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4976,7 +4976,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass357(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol358.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -4989,7 +4989,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass358(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol359.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5002,7 +5002,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass359(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol360.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5015,7 +5015,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass360(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol361.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5028,7 +5028,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass361(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol362.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5041,7 +5041,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass362(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol363.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5054,7 +5054,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass363(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol364.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5067,7 +5067,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass364(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol365.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5080,7 +5080,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass365(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol366.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5093,7 +5093,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass366(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol367.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5106,7 +5106,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass367(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol368.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5119,7 +5119,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass368(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol369.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5132,7 +5132,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass369(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol370.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5145,7 +5145,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass370(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol371.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5158,7 +5158,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass371(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol372.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5171,7 +5171,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass372(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol373.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5184,7 +5184,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass373(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol374.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5197,7 +5197,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass374(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol375.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5210,7 +5210,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass375(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol376.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5223,7 +5223,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass376(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol377.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5236,7 +5236,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass377(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol378.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5249,7 +5249,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass378(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol379.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5262,7 +5262,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass379(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol380.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5275,7 +5275,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass380(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol381.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5288,7 +5288,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass381(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol382.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5301,7 +5301,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass382(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol383.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5314,7 +5314,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass383(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol384.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5327,7 +5327,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass384(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol385.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5340,7 +5340,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass385(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol386.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5353,7 +5353,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass386(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol387.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5366,7 +5366,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass387(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol388.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5379,7 +5379,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass388(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol389.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5392,7 +5392,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass389(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol390.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5405,7 +5405,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass390(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol391.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5418,7 +5418,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass391(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol392.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5431,7 +5431,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass392(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol393.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5444,7 +5444,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass393(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol394.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5457,7 +5457,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass394(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol395.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5470,7 +5470,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass395(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol396.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5483,7 +5483,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass396(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol397.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5496,7 +5496,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass397(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol398.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5509,7 +5509,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass398(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol399.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5522,7 +5522,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass399(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol400.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5535,7 +5535,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass400(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol401.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5548,7 +5548,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass401(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol402.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5561,7 +5561,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass402(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol403.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5574,7 +5574,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass403(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol404.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5587,7 +5587,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass404(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol405.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5600,7 +5600,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass405(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol406.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5613,7 +5613,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass406(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol407.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5626,7 +5626,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass407(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol408.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5639,7 +5639,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass408(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol409.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5652,7 +5652,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass409(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol410.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5665,7 +5665,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass410(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol411.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5678,7 +5678,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass411(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol412.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5691,7 +5691,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass412(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol413.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5704,7 +5704,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass413(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol414.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5717,7 +5717,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass414(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol415.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5730,7 +5730,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass415(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol416.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5743,7 +5743,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass416(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol417.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5756,7 +5756,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass417(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol418.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5769,7 +5769,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass418(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol419.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5782,7 +5782,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass419(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol420.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5795,7 +5795,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass420(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol421.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5808,7 +5808,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass421(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol422.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5821,7 +5821,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass422(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol423.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5834,7 +5834,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass423(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol424.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5847,7 +5847,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass424(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol425.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5860,7 +5860,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass425(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol426.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5873,7 +5873,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass426(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol427.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5886,7 +5886,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass427(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol428.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5899,7 +5899,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass428(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol429.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5912,7 +5912,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass429(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol430.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5925,7 +5925,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass430(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol431.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5938,7 +5938,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass431(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol432.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5951,7 +5951,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass432(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol433.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5964,7 +5964,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass433(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol434.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5977,7 +5977,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass434(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol435.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -5990,7 +5990,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass435(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol436.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6003,7 +6003,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass436(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol437.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6016,7 +6016,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass437(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol438.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6029,7 +6029,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass438(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol439.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6042,7 +6042,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass439(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol440.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6055,7 +6055,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass440(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol441.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6068,7 +6068,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass441(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol442.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6081,7 +6081,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass442(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol443.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6094,7 +6094,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass443(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol444.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6107,7 +6107,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass444(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol445.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6120,7 +6120,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass445(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol446.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6133,7 +6133,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass446(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol447.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6146,7 +6146,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass447(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol448.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6159,7 +6159,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass448(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol449.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6172,7 +6172,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass449(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol450.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6185,7 +6185,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass450(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol451.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6198,7 +6198,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass451(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol452.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6211,7 +6211,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass452(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol453.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6224,7 +6224,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass453(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol454.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6237,7 +6237,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass454(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol455.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6250,7 +6250,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass455(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol456.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6263,7 +6263,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass456(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol457.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6276,7 +6276,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass457(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol458.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6289,7 +6289,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass458(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol459.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6302,7 +6302,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass459(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol460.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6315,7 +6315,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass460(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol461.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6328,7 +6328,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass461(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol462.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6341,7 +6341,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass462(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol463.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6354,7 +6354,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass463(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol464.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6367,7 +6367,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass464(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol465.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6380,7 +6380,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass465(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol466.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6393,7 +6393,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass466(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol467.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6406,7 +6406,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass467(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol468.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6419,7 +6419,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass468(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol469.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6432,7 +6432,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass469(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol470.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6445,7 +6445,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass470(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol471.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6458,7 +6458,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass471(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol472.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6471,7 +6471,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass472(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol473.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6484,7 +6484,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass473(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol474.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6497,7 +6497,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass474(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol475.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6510,7 +6510,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass475(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol476.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6523,7 +6523,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass476(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol477.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6536,7 +6536,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass477(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol478.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6549,7 +6549,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass478(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol479.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6562,7 +6562,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass479(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol480.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6575,7 +6575,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass480(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol481.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6588,7 +6588,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass481(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol482.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6601,7 +6601,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass482(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol483.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6614,7 +6614,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass483(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol484.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6627,7 +6627,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass484(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol485.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6640,7 +6640,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass485(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol486.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6653,7 +6653,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass486(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol487.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6666,7 +6666,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass487(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol488.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6679,7 +6679,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass488(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol489.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6692,7 +6692,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass489(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol490.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6705,7 +6705,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass490(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol491.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6718,7 +6718,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass491(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol492.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6731,7 +6731,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass492(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol493.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6744,7 +6744,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass493(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol494.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6757,7 +6757,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass494(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol495.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6770,7 +6770,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass495(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol496.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6783,7 +6783,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass496(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol497.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6796,7 +6796,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass497(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol498.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6809,7 +6809,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass498(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol499.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6822,7 +6822,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass499(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol500.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -6835,7 +6835,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass500(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
     }
     
     static func resolving_500(container: Container) {
@@ -7160,7 +7160,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass501(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol502.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7173,7 +7173,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass502(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol503.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7186,7 +7186,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass503(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol504.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7199,7 +7199,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass504(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol505.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7212,7 +7212,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass505(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol506.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7225,7 +7225,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass506(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol507.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7238,7 +7238,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass507(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol508.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7251,7 +7251,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass508(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol509.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7264,7 +7264,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass509(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol510.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7277,7 +7277,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass510(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol511.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7290,7 +7290,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass511(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol512.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7303,7 +7303,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass512(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol513.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7316,7 +7316,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass513(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol514.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7329,7 +7329,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass514(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol515.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7342,7 +7342,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass515(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol516.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7355,7 +7355,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass516(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol517.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7368,7 +7368,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass517(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol518.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7381,7 +7381,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass518(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol519.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7394,7 +7394,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass519(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol520.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7407,7 +7407,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass520(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol521.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7420,7 +7420,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass521(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol522.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7433,7 +7433,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass522(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol523.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7446,7 +7446,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass523(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol524.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7459,7 +7459,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass524(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol525.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7472,7 +7472,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass525(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol526.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7485,7 +7485,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass526(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol527.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7498,7 +7498,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass527(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol528.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7511,7 +7511,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass528(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol529.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7524,7 +7524,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass529(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol530.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7537,7 +7537,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass530(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol531.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7550,7 +7550,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass531(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol532.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7563,7 +7563,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass532(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol533.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7576,7 +7576,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass533(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol534.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7589,7 +7589,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass534(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol535.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7602,7 +7602,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass535(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol536.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7615,7 +7615,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass536(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol537.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7628,7 +7628,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass537(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol538.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7641,7 +7641,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass538(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol539.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7654,7 +7654,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass539(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol540.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7667,7 +7667,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass540(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol541.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7680,7 +7680,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass541(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol542.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7693,7 +7693,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass542(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol543.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7706,7 +7706,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass543(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol544.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7719,7 +7719,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass544(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol545.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7732,7 +7732,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass545(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol546.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7745,7 +7745,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass546(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol547.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7758,7 +7758,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass547(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol548.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7771,7 +7771,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass548(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol549.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7784,7 +7784,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass549(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol550.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7797,7 +7797,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass550(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol551.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7810,7 +7810,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass551(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol552.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7823,7 +7823,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass552(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol553.self) { resolver in
 
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
@@ -7837,7 +7837,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass553(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol554.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7850,7 +7850,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass554(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol555.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7863,7 +7863,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass555(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol556.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7877,7 +7877,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass556(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol557.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7890,7 +7890,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass557(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol558.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7903,7 +7903,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass558(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol559.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7916,7 +7916,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass559(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol560.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7929,7 +7929,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass560(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol561.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7942,7 +7942,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass561(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol562.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7955,7 +7955,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass562(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol563.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7968,7 +7968,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass563(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol564.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7981,7 +7981,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass564(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol565.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -7994,7 +7994,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass565(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol566.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8007,7 +8007,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass566(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol567.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8020,7 +8020,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass567(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol568.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8033,7 +8033,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass568(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol569.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8046,7 +8046,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass569(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol570.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8059,7 +8059,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass570(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol571.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8072,7 +8072,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass571(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol572.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8085,7 +8085,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass572(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol573.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8098,7 +8098,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass573(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol574.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8111,7 +8111,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass574(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol575.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8124,7 +8124,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass575(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol576.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8137,7 +8137,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass576(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol577.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8150,7 +8150,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass577(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol578.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8163,7 +8163,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass578(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol579.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8176,7 +8176,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass579(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol580.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8189,7 +8189,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass580(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol581.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8202,7 +8202,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass581(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol582.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8215,7 +8215,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass582(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol583.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8228,7 +8228,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass583(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol584.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8241,7 +8241,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass584(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol585.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8254,7 +8254,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass585(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol586.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8267,7 +8267,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass586(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol587.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8280,7 +8280,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass587(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol588.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8293,7 +8293,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass588(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol589.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8306,7 +8306,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass589(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol590.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8319,7 +8319,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass590(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol591.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8332,7 +8332,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass591(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol592.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8345,7 +8345,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass592(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol593.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8358,7 +8358,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass593(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol594.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8371,7 +8371,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass594(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol595.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8384,7 +8384,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass595(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol596.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8397,7 +8397,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass596(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol597.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8410,7 +8410,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass597(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol598.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8423,7 +8423,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass598(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol599.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8436,7 +8436,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass599(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol600.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8449,7 +8449,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass600(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol601.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8462,7 +8462,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass601(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol602.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8475,7 +8475,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass602(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol603.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8488,7 +8488,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass603(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol604.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8501,7 +8501,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass604(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol605.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8514,7 +8514,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass605(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol606.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8527,7 +8527,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass606(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol607.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8540,7 +8540,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass607(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol608.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8553,7 +8553,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass608(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol609.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8566,7 +8566,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass609(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol610.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8579,7 +8579,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass610(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol611.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8592,7 +8592,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass611(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol612.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8605,7 +8605,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass612(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol613.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8618,7 +8618,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass613(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol614.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8631,7 +8631,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass614(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol615.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8644,7 +8644,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass615(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol616.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8657,7 +8657,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass616(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol617.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8670,7 +8670,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass617(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol618.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8683,7 +8683,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass618(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol619.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8696,7 +8696,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass619(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol620.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8709,7 +8709,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass620(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol621.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8722,7 +8722,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass621(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol622.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8735,7 +8735,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass622(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol623.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8748,7 +8748,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass623(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol624.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8761,7 +8761,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass624(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol625.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8774,7 +8774,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass625(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol626.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8787,7 +8787,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass626(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol627.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8800,7 +8800,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass627(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol628.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8813,7 +8813,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass628(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol629.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8826,7 +8826,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass629(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol630.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8839,7 +8839,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass630(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol631.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8852,7 +8852,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass631(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol632.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8865,7 +8865,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass632(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol633.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8878,7 +8878,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass633(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol634.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8891,7 +8891,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass634(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol635.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8904,7 +8904,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass635(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol636.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8917,7 +8917,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass636(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol637.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8930,7 +8930,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass637(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol638.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8943,7 +8943,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass638(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol639.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8956,7 +8956,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass639(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol640.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8969,7 +8969,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass640(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol641.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8982,7 +8982,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass641(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol642.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -8995,7 +8995,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass642(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol643.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9008,7 +9008,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass643(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol644.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9021,7 +9021,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass644(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol645.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9034,7 +9034,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass645(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol646.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9047,7 +9047,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass646(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol647.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9060,7 +9060,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass647(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol648.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9073,7 +9073,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass648(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol649.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9086,7 +9086,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass649(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol650.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9099,7 +9099,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass650(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol651.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9112,7 +9112,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass651(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol652.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9125,7 +9125,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass652(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol653.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9138,7 +9138,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass653(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol654.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9151,7 +9151,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass654(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol655.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9164,7 +9164,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass655(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol656.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9177,7 +9177,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass656(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol657.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9190,7 +9190,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass657(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol658.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9203,7 +9203,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass658(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol659.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9216,7 +9216,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass659(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol660.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9229,7 +9229,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass660(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol661.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9242,7 +9242,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass661(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol662.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9255,7 +9255,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass662(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol663.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9268,7 +9268,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass663(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol664.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9281,7 +9281,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass664(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol665.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9294,7 +9294,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass665(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol666.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9307,7 +9307,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass666(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol667.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9320,7 +9320,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass667(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol668.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9333,7 +9333,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass668(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol669.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9346,7 +9346,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass669(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol670.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9359,7 +9359,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass670(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol671.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9372,7 +9372,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass671(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol672.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9385,7 +9385,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass672(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol673.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9398,7 +9398,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass673(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol674.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9411,7 +9411,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass674(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol675.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9424,7 +9424,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass675(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol676.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9437,7 +9437,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass676(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol677.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9450,7 +9450,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass677(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol678.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9463,7 +9463,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass678(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol679.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9476,7 +9476,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass679(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol680.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9489,7 +9489,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass680(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol681.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9502,7 +9502,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass681(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol682.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9515,7 +9515,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass682(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol683.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9528,7 +9528,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass683(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol684.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9541,7 +9541,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass684(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol685.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9554,7 +9554,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass685(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol686.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9567,7 +9567,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass686(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol687.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9580,7 +9580,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass687(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol688.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9593,7 +9593,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass688(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol689.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9606,7 +9606,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass689(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol690.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9619,7 +9619,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass690(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol691.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9632,7 +9632,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass691(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol692.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9645,7 +9645,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass692(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol693.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9658,7 +9658,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass693(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol694.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9671,7 +9671,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass694(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol695.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9684,7 +9684,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass695(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol696.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9697,7 +9697,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass696(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol697.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9710,7 +9710,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass697(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol698.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9723,7 +9723,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass698(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol699.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9736,7 +9736,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass699(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol700.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9749,7 +9749,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass700(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol701.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9762,7 +9762,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass701(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol702.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9775,7 +9775,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass702(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol703.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9788,7 +9788,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass703(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol704.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9801,7 +9801,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass704(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol705.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9814,7 +9814,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass705(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol706.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9827,7 +9827,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass706(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol707.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9840,7 +9840,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass707(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol708.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9853,7 +9853,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass708(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol709.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9866,7 +9866,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass709(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol710.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9879,7 +9879,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass710(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol711.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9892,7 +9892,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass711(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol712.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9905,7 +9905,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass712(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol713.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9918,7 +9918,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass713(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol714.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9931,7 +9931,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass714(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol715.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9944,7 +9944,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass715(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol716.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9957,7 +9957,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass716(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol717.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9970,7 +9970,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass717(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol718.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9983,7 +9983,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass718(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol719.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -9996,7 +9996,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass719(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol720.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10009,7 +10009,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass720(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol721.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10022,7 +10022,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass721(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol722.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10035,7 +10035,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass722(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol723.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10048,7 +10048,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass723(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol724.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10061,7 +10061,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass724(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol725.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10074,7 +10074,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass725(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol726.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10087,7 +10087,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass726(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol727.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10100,7 +10100,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass727(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol728.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10113,7 +10113,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass728(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol729.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10126,7 +10126,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass729(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol730.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10139,7 +10139,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass730(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol731.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10152,7 +10152,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass731(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol732.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10165,7 +10165,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass732(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol733.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10178,7 +10178,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass733(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol734.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10191,7 +10191,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass734(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol735.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10204,7 +10204,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass735(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol736.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10217,7 +10217,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass736(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol737.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10230,7 +10230,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass737(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol738.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10243,7 +10243,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass738(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol739.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10256,7 +10256,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass739(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol740.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10269,7 +10269,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass740(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol741.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10282,7 +10282,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass741(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol742.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10295,7 +10295,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass742(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol743.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10308,7 +10308,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass743(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol744.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10321,7 +10321,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass744(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol745.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10334,7 +10334,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass745(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol746.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10347,7 +10347,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass746(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol747.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10360,7 +10360,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass747(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol748.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10373,7 +10373,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass748(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol749.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10386,7 +10386,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass749(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol750.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10399,7 +10399,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass750(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol751.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10412,7 +10412,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass751(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol752.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10425,7 +10425,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass752(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol753.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10438,7 +10438,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass753(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol754.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10451,7 +10451,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass754(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol755.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10464,7 +10464,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass755(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol756.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10477,7 +10477,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass756(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol757.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10490,7 +10490,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass757(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol758.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10503,7 +10503,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass758(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol759.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10516,7 +10516,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass759(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol760.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10529,7 +10529,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass760(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol761.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10542,7 +10542,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass761(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol762.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10555,7 +10555,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass762(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol763.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10568,7 +10568,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass763(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol764.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10581,7 +10581,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass764(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol765.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10594,7 +10594,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass765(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol766.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10607,7 +10607,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass766(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol767.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10620,7 +10620,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass767(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol768.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10633,7 +10633,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass768(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol769.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10646,7 +10646,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass769(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol770.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10659,7 +10659,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass770(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol771.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10672,7 +10672,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass771(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol772.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10685,7 +10685,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass772(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol773.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10698,7 +10698,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass773(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol774.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10711,7 +10711,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass774(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol775.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10724,7 +10724,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass775(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol776.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10737,7 +10737,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass776(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol777.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10750,7 +10750,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass777(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol778.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10763,7 +10763,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass778(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol779.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10776,7 +10776,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass779(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol780.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10789,7 +10789,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass780(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol781.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10802,7 +10802,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass781(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol782.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10815,7 +10815,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass782(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol783.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10828,7 +10828,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass783(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol784.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10841,7 +10841,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass784(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol785.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10854,7 +10854,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass785(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol786.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10867,7 +10867,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass786(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol787.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10880,7 +10880,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass787(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol788.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10893,7 +10893,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass788(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol789.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10906,7 +10906,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass789(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol790.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10919,7 +10919,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass790(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol791.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10932,7 +10932,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass791(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol792.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10945,7 +10945,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass792(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol793.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10958,7 +10958,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass793(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol794.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10971,7 +10971,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass794(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol795.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10984,7 +10984,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass795(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol796.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -10997,7 +10997,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass796(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol797.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11010,7 +11010,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass797(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol798.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11023,7 +11023,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass798(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol799.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11036,7 +11036,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass799(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol800.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11049,7 +11049,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass800(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol801.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11062,7 +11062,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass801(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol802.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11075,7 +11075,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass802(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol803.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11088,7 +11088,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass803(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol804.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11101,7 +11101,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass804(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol805.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11114,7 +11114,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass805(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol806.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11127,7 +11127,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass806(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol807.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11140,7 +11140,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass807(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol808.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11153,7 +11153,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass808(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol809.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11166,7 +11166,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass809(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol810.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11179,7 +11179,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass810(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol811.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11192,7 +11192,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass811(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol812.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11205,7 +11205,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass812(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol813.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11218,7 +11218,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass813(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol814.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11231,7 +11231,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass814(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol815.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11244,7 +11244,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass815(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol816.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11257,7 +11257,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass816(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol817.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11270,7 +11270,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass817(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol818.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11283,7 +11283,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass818(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol819.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11296,7 +11296,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass819(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol820.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11309,7 +11309,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass820(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol821.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11322,7 +11322,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass821(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol822.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11335,7 +11335,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass822(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol823.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11348,7 +11348,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass823(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol824.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11361,7 +11361,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass824(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol825.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11374,7 +11374,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass825(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol826.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11387,7 +11387,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass826(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol827.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11400,7 +11400,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass827(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol828.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11413,7 +11413,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass828(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol829.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11426,7 +11426,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass829(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol830.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11439,7 +11439,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass830(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol831.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11452,7 +11452,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass831(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol832.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11465,7 +11465,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass832(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol833.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11478,7 +11478,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass833(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol834.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11491,7 +11491,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass834(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol835.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11504,7 +11504,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass835(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol836.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11517,7 +11517,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass836(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol837.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11530,7 +11530,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass837(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol838.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11543,7 +11543,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass838(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol839.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11556,7 +11556,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass839(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol840.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11569,7 +11569,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass840(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol841.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11582,7 +11582,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass841(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol842.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11595,7 +11595,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass842(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol843.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11608,7 +11608,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass843(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol844.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11621,7 +11621,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass844(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol845.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11634,7 +11634,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass845(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol846.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11647,7 +11647,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass846(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol847.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11660,7 +11660,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass847(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol848.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11673,7 +11673,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass848(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol849.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11686,7 +11686,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass849(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol850.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
 
@@ -11700,7 +11700,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass850(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol851.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11713,7 +11713,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass851(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol852.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11726,7 +11726,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass852(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol853.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11740,7 +11740,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass853(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol854.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11753,7 +11753,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass854(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol855.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11766,7 +11766,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass855(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol856.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11779,7 +11779,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass856(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol857.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11792,7 +11792,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass857(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol858.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11805,7 +11805,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass858(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol859.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11818,7 +11818,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass859(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol860.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11831,7 +11831,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass860(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol861.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11844,7 +11844,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass861(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol862.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11857,7 +11857,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass862(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol863.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11870,7 +11870,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass863(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol864.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11883,7 +11883,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass864(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol865.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11896,7 +11896,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass865(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol866.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11909,7 +11909,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass866(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol867.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11922,7 +11922,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass867(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol868.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11935,7 +11935,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass868(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol869.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11948,7 +11948,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass869(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol870.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11961,7 +11961,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass870(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol871.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11974,7 +11974,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass871(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol872.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -11987,7 +11987,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass872(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol873.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12000,7 +12000,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass873(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol874.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12013,7 +12013,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass874(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol875.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12026,7 +12026,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass875(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol876.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12039,7 +12039,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass876(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol877.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12052,7 +12052,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass877(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol878.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12065,7 +12065,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass878(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol879.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12078,7 +12078,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass879(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol880.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12091,7 +12091,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass880(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol881.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12104,7 +12104,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass881(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol882.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12117,7 +12117,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass882(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol883.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12130,7 +12130,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass883(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol884.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12143,7 +12143,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass884(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol885.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12156,7 +12156,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass885(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol886.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12169,7 +12169,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass886(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol887.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12182,7 +12182,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass887(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol888.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12195,7 +12195,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass888(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol889.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12208,7 +12208,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass889(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol890.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12221,7 +12221,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass890(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol891.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12234,7 +12234,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass891(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol892.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12247,7 +12247,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass892(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol893.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12260,7 +12260,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass893(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol894.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12273,7 +12273,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass894(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol895.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12286,7 +12286,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass895(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol896.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12299,7 +12299,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass896(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol897.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12312,7 +12312,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass897(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol898.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12325,7 +12325,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass898(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol899.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12338,7 +12338,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass899(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol900.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12351,7 +12351,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass900(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol901.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12364,7 +12364,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass901(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol902.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12377,7 +12377,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass902(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol903.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12390,7 +12390,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass903(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol904.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12403,7 +12403,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass904(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol905.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12416,7 +12416,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass905(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol906.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12429,7 +12429,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass906(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol907.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12442,7 +12442,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass907(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol908.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12455,7 +12455,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass908(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol909.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12468,7 +12468,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass909(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol910.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12481,7 +12481,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass910(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol911.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12494,7 +12494,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass911(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol912.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12507,7 +12507,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass912(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol913.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12520,7 +12520,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass913(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol914.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12533,7 +12533,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass914(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol915.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12546,7 +12546,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass915(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol916.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12559,7 +12559,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass916(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol917.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12572,7 +12572,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass917(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol918.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12585,7 +12585,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass918(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol919.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12598,7 +12598,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass919(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol920.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12611,7 +12611,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass920(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol921.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12624,7 +12624,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass921(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol922.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12637,7 +12637,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass922(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol923.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12650,7 +12650,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass923(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol924.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12663,7 +12663,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass924(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol925.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12676,7 +12676,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass925(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol926.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12689,7 +12689,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass926(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol927.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12702,7 +12702,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass927(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol928.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12715,7 +12715,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass928(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol929.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12728,7 +12728,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass929(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol930.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12741,7 +12741,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass930(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol931.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12754,7 +12754,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass931(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol932.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12767,7 +12767,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass932(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol933.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12780,7 +12780,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass933(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol934.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12793,7 +12793,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass934(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol935.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12806,7 +12806,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass935(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol936.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12819,7 +12819,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass936(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol937.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12832,7 +12832,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass937(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol938.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12845,7 +12845,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass938(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol939.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12858,7 +12858,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass939(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol940.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12871,7 +12871,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass940(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol941.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12884,7 +12884,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass941(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol942.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12897,7 +12897,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass942(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol943.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12910,7 +12910,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass943(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol944.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12923,7 +12923,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass944(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol945.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12936,7 +12936,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass945(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol946.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12949,7 +12949,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass946(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol947.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12962,7 +12962,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass947(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol948.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12975,7 +12975,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass948(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol949.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -12988,7 +12988,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass949(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol950.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13001,7 +13001,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass950(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol951.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13014,7 +13014,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass951(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol952.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13027,7 +13027,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass952(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol953.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13040,7 +13040,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass953(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol954.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13053,7 +13053,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass954(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol955.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13066,7 +13066,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass955(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol956.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13079,7 +13079,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass956(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol957.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13092,7 +13092,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass957(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol958.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13105,7 +13105,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass958(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol959.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13118,7 +13118,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass959(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol960.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13131,7 +13131,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass960(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol961.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13144,7 +13144,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass961(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol962.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13157,7 +13157,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass962(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol963.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13170,7 +13170,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass963(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol964.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13183,7 +13183,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass964(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol965.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13196,7 +13196,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass965(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol966.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13209,7 +13209,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass966(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol967.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13222,7 +13222,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass967(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol968.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13235,7 +13235,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass968(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol969.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13248,7 +13248,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass969(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol970.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13261,7 +13261,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass970(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol971.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13274,7 +13274,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass971(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol972.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13287,7 +13287,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass972(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol973.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13300,7 +13300,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass973(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol974.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13313,7 +13313,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass974(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol975.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13326,7 +13326,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass975(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol976.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13339,7 +13339,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass976(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol977.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13352,7 +13352,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass977(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol978.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13365,7 +13365,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass978(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol979.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13378,7 +13378,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass979(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol980.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13391,7 +13391,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass980(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol981.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13404,7 +13404,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass981(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol982.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13417,7 +13417,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass982(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol983.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13430,7 +13430,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass983(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol984.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13443,7 +13443,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass984(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol985.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13456,7 +13456,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass985(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol986.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13469,7 +13469,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass986(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol987.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13482,7 +13482,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass987(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol988.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13495,7 +13495,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass988(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol989.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13508,7 +13508,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass989(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol990.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13521,7 +13521,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass990(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol991.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13534,7 +13534,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass991(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol992.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13547,7 +13547,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass992(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol993.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13560,7 +13560,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass993(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol994.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13573,7 +13573,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass994(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol995.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13586,7 +13586,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass995(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol996.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13599,7 +13599,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass996(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol997.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13612,7 +13612,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass997(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol998.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13625,7 +13625,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass998(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol999.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13638,7 +13638,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass999(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
         container.register(TestProtocol1000.self) { resolver in
             let param1 = resolver.resolve(InjectedTestProtocol1.self)!
             let param2 = resolver.resolve(InjectedTestProtocol2.self)!
@@ -13651,7 +13651,7 @@ extension SwinjectComplexGraphTests {
             let param9 = resolver.resolve(InjectedTestProtocol9.self)!
             let param10 = resolver.resolve(InjectedTestProtocol10.self)!
             return TestClass1000(param1: param1, param2: param2, param3: param3, param4: param4, param5: param5, param6: param6, param7: param7, param8: param8, param9: param9, param10: param10)
-        }//.inObjectScope(.transient)
+        }
     }
     
     static func resolving_1000(container: Container) {

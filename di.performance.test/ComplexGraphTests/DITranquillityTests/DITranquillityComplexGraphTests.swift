@@ -11,7 +11,7 @@ import DITranquillity
 
 struct DITranquillityComplexGraphTests {
     
-    static let registerCount = 1000
+    static let registerCount = 100
     
     static let resolveMultiplier = 1000 / registerCount
     static let testsCount = 100
@@ -119,7 +119,7 @@ struct DITranquillityComplexGraphTests {
         // Average time resolving 2.055
     
     
-    // Transient dependencies injected
+    // Transient dependencies injected (prototype)
     
     // register: 100 / resolve: 1000
         // Average time register 0.0045

@@ -11,7 +11,7 @@ import Dip
 
 struct DipComplexGraphTests {
     
-    static let registerCount = 500
+    static let registerCount = 100
     
     static let resolveMultiplier = 1000 / registerCount
     static let testsCount = 100
