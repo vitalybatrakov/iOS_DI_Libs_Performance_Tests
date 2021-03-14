@@ -19,6 +19,7 @@ struct DITranquillityComplexGraphTests {
     
     static func testPerformance() {
         
+        print("DITranquillityComplexGraphTests")
         print("RegisterCount \(registerCount)")
         print("ResolveMultiplier \(resolveMultiplier)")
         
@@ -100,7 +101,49 @@ struct DITranquillityComplexGraphTests {
         print("Average time resolving3 \(resolvingTime / testsCountDevider)")
     }
     
+    // IPad 2017
+    
+    // DITranquillity 4.2 Release
     // ObjectGraph dependencies injected
+    
+    // register: 100 / resolve: 1000
+        // Average time register 0.00155
+        // Average time resolving 0.167
+    
+    // register: 200 / resolve: 1000
+        // Average time register 0.00316
+        // Average time resolving 0.172
+    
+    // register: 500 / resolve: 1000
+        // Average time register 0.0099
+        // Average time resolving 0.181
+    
+    // register: 1000 / resolve: 1000
+        // Average time register 0.029
+        // Average time resolving 0.201
+    
+    
+    // DITranquillity 4.2 Debug
+    // ObjectGraph dependencies injected
+    
+    // register: 100 / resolve: 1000
+        // Average time register 0.0045
+        // Average time resolving 0.456
+    
+    // register: 200 / resolve: 1000
+        // Average time register 0.0088
+        // Average time resolving 0.461
+    
+    // register: 500 / resolve: 1000
+        // Average time register 0.024
+        // Average time resolving 0.469
+    
+    // register: 1000 / resolve: 1000
+        // Average time register 0.055
+        // Average time resolving 0.492
+    
+    
+    // Before DITranquillity 4.2 Debug
     
     // register: 100 / resolve: 1000
         // Average time register 0.0046

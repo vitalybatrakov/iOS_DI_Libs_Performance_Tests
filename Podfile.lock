@@ -1,6 +1,6 @@
 PODS:
   - Dip (7.1.1)
-  - DITranquillity (4.1.0):
+  - DITranquillity (4.2.0):
     - SwiftLazy (>= 1.1.6)
   - EasyDi (1.5.0)
   - SwiftLazy (1.1.7)
@@ -26,7 +26,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Dip: 6bebb09d50f88633039ce2c9fe5bc56d387b492f
-  DITranquillity: a589f609d3f952665483cae4f6057abd51da914b
+  DITranquillity: 1f91f7a70553762095e001cf99bfe8f64c280ef0
   EasyDi: 69f886c8911504d33cb55db4a47648f434feeddd
   SwiftLazy: dcb1edc6c2b633ba2e68f28554d9dd6d1c0bfd13
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e

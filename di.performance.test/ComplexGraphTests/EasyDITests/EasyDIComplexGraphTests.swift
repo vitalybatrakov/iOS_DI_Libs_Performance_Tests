@@ -19,6 +19,7 @@ struct EasyDIComplexGraphTests {
     
     static func testPerformance() {
         
+        print("EasyDIComplexGraphTests")
         print("RegisterCount \(registerCount)")
         print("ResolveMultiplier \(resolveMultiplier)")
         
@@ -101,6 +102,29 @@ struct EasyDIComplexGraphTests {
     }
     
     // IPad 2017
+    
+    // Release
+    // ObjectGraph dependencies injected
+    
+    // register: 100 / resolve: 1000
+        // Average time register 0.000007
+        // Average time resolving 0.709
+    
+    // register: 200 / resolve: 1000
+        // Average time register 0.000008
+        // Average time resolving 0.713
+    
+    // register: 500 / resolve: 1000
+        // Average time register 0.000009
+        // Average time resolving 0.718
+    
+    // register: 1000 / resolve: 1000
+        // Average time register 0.00001
+        // Average time resolving 0.727
+    
+    
+    
+    // Debug
     
     // ObjectGraph dependencies injected
     

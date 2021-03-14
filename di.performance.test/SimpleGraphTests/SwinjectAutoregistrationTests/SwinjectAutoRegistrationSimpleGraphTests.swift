@@ -20,6 +20,7 @@ struct SwinjectAutoRegistrationSimpleGraphTests {
     
     static func testPerformance() {
         
+        print("SwinjectAutoRegistrationSimpleGraphTests")
         print("RegisterCount \(registerCount)")
         print("ResolveMultiplier \(resolveMultiplier)")
         
@@ -102,6 +103,27 @@ struct SwinjectAutoRegistrationSimpleGraphTests {
     }
     
     // IPad 2017
+    
+    // Release
+    
+    // register: 100 / resolve: 1000
+         // Average time register 0.00025
+         // Average time resolving 0.0318
+     
+     // register: 200 / resolve: 1000
+         // Average time register 0.00054
+         // Average time resolving 0.0437
+     
+     // register: 500 / resolve: 1000
+         // Average time register 0.0021
+         // Average time resolving 0.0821
+     
+     // register: 1000 / resolve: 1000
+         // Average time register 0.0098
+         // Average time resolving 0.148
+    
+    
+    // Debug
     
     // register: 100 / resolve: 1000
          // Average time register 0.0004

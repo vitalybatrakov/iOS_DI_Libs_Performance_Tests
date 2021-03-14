@@ -41,6 +41,7 @@ extension EasyDIComplexGraphTests {
             
         default:
             assert(false, "EasyDITests create Invalid count")
+            return Assembly()
         }
     }
     

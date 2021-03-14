@@ -11,7 +11,7 @@ import Dip
 
 struct DipSimpleGraphTests {
     
-    static let registerCount = 100
+    static let registerCount = 1000
     
     static let resolveMultiplier = 1000 / registerCount
     static let testsCount = 100
@@ -19,6 +19,7 @@ struct DipSimpleGraphTests {
     
     static func testPerformance() {
         
+        print("DipSimpleGraphTests")
         print("RegisterCount \(registerCount)")
         print("ResolveMultiplier \(resolveMultiplier)")
         
@@ -102,6 +103,27 @@ struct DipSimpleGraphTests {
     }
     
     // IPad 2017
+    
+    // Release
+    
+    // register: 100 / resolve: 1000
+        // Average time register 0.00031
+        // Average time resolving 0.118
+    
+    // register: 200 / resolve: 1000
+        // Average time register 0.00067
+        // Average time resolving 0.143
+    
+    // register: 500 / resolve: 1000
+        // Average time register 0.0017
+        // Average time resolving 0.231
+    
+    // register: 1000 / resolve: 1000
+        // Average time register 0.0064
+        // Average time resolving 0.373
+    
+    
+    // Debug
     
     // register: 100 / resolve: 1000
         // Average time register 0.00085

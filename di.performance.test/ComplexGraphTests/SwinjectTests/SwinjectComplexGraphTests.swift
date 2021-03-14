@@ -18,7 +18,8 @@ struct SwinjectComplexGraphTests {
     static let testsCountDevider: Double = Double(testsCount)
     
     static func testPerformance() {
-        
+    
+        print("SwinjectComplexGraphTests")
         print("RegisterCount \(registerCount)")
         print("ResolveMultiplier \(resolveMultiplier)")
         
@@ -101,6 +102,28 @@ struct SwinjectComplexGraphTests {
     }
     
     // IPad 2017
+    
+    // Release
+    // ObjectGraph dependencies injected
+    
+    // register: 100 / resolve: 1000
+        // Average time register 0.00024
+        // Average time resolving 0.111
+    
+    // register: 200 / resolve: 1000
+        // Average time register 0.00054
+        // Average time resolving 0.121
+    
+    // register: 500 / resolve: 1000
+        // Average time register 0.00213
+        // Average time resolving 0.163
+    
+    // register: 1000 / resolve: 1000
+        // Average time register 0.098
+        // Average time resolving 0.224
+    
+    
+    // Debug
     
     // ObjectGraph dependencies injected
     

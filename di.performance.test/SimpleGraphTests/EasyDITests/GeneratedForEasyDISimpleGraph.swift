@@ -41,6 +41,7 @@ extension EasyDISimpleGraphTests {
             
         default:
             assert(false, "EasyDISimpleGraphTests create Invalid count")
+            return Assembly()
         }
     }
     

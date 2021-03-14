@@ -19,6 +19,7 @@ struct EasyDISimpleGraphTests {
     
     static func testPerformance() {
         
+        print("EasyDISimpleGraphTests")
         print("RegisterCount \(registerCount)")
         print("ResolveMultiplier \(resolveMultiplier)")
         
@@ -101,6 +102,27 @@ struct EasyDISimpleGraphTests {
     }
     
     // IPad 2017
+    
+    // Release
+    
+    // register: 100 / resolve: 1000
+        // Average time register 5.77e-06
+        // Average time resolving 0.084
+    
+    // register: 200 / resolve: 1000
+        // Average time register 6.67e-06
+        // Average time resolving 0.086
+    
+    // register: 500 / resolve: 1000
+        // Average time register 6.99e-06
+        // Average time resolving 0.089
+    
+    // register: 1000 / resolve: 1000
+        // Average time register 7.86e-06
+        // Average time resolving 0.093
+    
+    
+    // Debug
     
     // register: 100 / resolve: 1000
         // Average time register 1.25e-05

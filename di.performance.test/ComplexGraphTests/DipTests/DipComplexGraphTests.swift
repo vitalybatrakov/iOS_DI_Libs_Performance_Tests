@@ -19,6 +19,7 @@ struct DipComplexGraphTests {
     
     static func testPerformance() {
         
+        print("DipComplexGraphTests")
         print("RegisterCount \(registerCount)")
         print("ResolveMultiplier \(resolveMultiplier)")
         
@@ -100,7 +101,31 @@ struct DipComplexGraphTests {
         print("Average time resolving3 \(resolvingTime / testsCountDevider)")
     }
     
-    // ObjectGraph dependencies injected
+    // IPad 2017
+    
+    // Release
+    // Shared(graph) dependencies injected
+    
+    // register: 100 / resolve: 1000
+        // Average time register 0.00034
+        // Average time resolving 0.577
+    
+    // register: 200 / resolve: 1000
+        // Average time register 0.0007
+        // Average time resolving 0.602
+    
+    // register: 500 / resolve: 1000
+        // Average time register 0.002
+        // Average time resolving 0.698
+    
+    // register: 1000 / resolve: 1000
+        // Average time register 0.0045
+        // Average time resolving 0.849
+    
+    
+    // Debug
+    
+    // Shared(graph) dependencies injected
     
     // register: 100 / resolve: 1000
         // Average time register 0.0008
